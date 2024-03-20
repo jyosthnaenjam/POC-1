@@ -1,0 +1,492 @@
+<section class="m-3">
+    <!-- Tab View Of the Page -->
+    <ul class="nav nav-tabs">
+      <!-- Recent Tab -->
+      <li
+        class="nav-item"
+        [ngClass]="{ active: activeTab === 1 }"
+        (click)="activateTab(1)"
+      >
+        <a
+          class="nav-link"
+          [ngStyle]="{
+            'border-bottom': activeTab === 1 ? '2px solid #082341' : 'none',
+            color: activeTab === 1 ? '#082341' : '#000',
+            'font-size': activeTab == 1 ? '20px' : '16px',
+            opacity: activeTab === 1 ? '1' : '0.4'
+          }"
+          >Recent Transaction</a
+        >
+      </li>
+      <!-- Transaction History -->
+      <li
+        class="nav-item"
+        [ngClass]="{ active: activeTab === 2 }"
+        (click)="activateTab(2)"
+      >
+        <a
+          class="nav-link"
+          [ngStyle]="{
+            'border-bottom': activeTab === 2 ? '2px solid #082341' : 'none',
+            color: activeTab === 2 ? '#082341' : '#000',
+            'font-size': activeTab == 2 ? '20px' : '16px',
+            opacity: activeTab === 2 ? '1' : '0.4'
+          }"
+          >Transaction History</a
+        >
+      </li>
+      <!-- Account Statement -->
+      <li
+        class="nav-item"
+        [ngClass]="{ active: activeTab === 3 }"
+        (click)="activateTab(3)"
+      >
+        <a
+          class="nav-link"
+          [ngStyle]="{
+            'border-bottom': activeTab === 3 ? '2px solid #082341' : 'none',
+            color: activeTab === 3 ? '#082341' : '#000',
+            'font-size': activeTab == 3 ? '20px' : '16px',
+            opacity: activeTab === 3 ? '1' : '0.4'
+          }"
+          >Account Statement</a
+        >
+      </li>
+    </ul>
+    
+    <main class="tab-content mt-2">
+      <!-- User Recent Transactions Tab -->
+      <div class="tab-pane" [ngClass]="{ active: activeTab === 1 }">
+        <!-- Showing Data in the Form Of Table -->
+        <table class="container-fluid">
+          <tr class="eachData">
+            <td class="data">
+              <img src="assets/down-arrow.svg" alt="Credit" class="eachArrow" />
+            </td>
+            <td class="eachName">Natasha Davel</td>
+            <td class="eachDate">15/03/2024</td>
+            <td class="eachType">Credited</td>
+            <td class="eachDesc">IMPS 1234/UPI123456/DIleep Thotakura/PhonePe</td>
+            <td class="eachAmountCredit">$ 1,256.00</td>
+            <td class="eachTotamount">$ 1,11,256.00</td>
+          </tr>
+  
+          <tr class="eachData">
+            <td class="data">
+              <img src="assets/upward-arrow.svg" alt="Debit" class="eachArrow" />
+            </td>
+            <td class="eachName">Fusion Restro</td>
+            <td class="eachDate">15/03/2024</td>
+            <td class="eachType">Debited</td>
+            <td class="eachDesc">123456/Fusion Restro</td>
+            <td class="eachAmountDebit">$ 1,256.00</td>
+            <td class="eachTotamount">$ 1,10,256.00</td>
+          </tr>
+          <tr class="eachData">
+            <td class="data">
+              <img src="assets/down-arrow.svg" alt="Credit" class="eachArrow" />
+            </td>
+            <td class="eachName">Evoke Technologies</td>
+            <td class="eachDate">15/03/2024</td>
+            <td class="eachType">Credited</td>
+            <td class="eachDesc">IMPS 1234/UPI123456/DIleep Thotakura/PhonePe</td>
+            <td class="eachAmountCredit">$ 1,256.00</td>
+            <td class="eachTotamount">$ 1,11,256.00</td>
+          </tr>
+          <tr class="eachData">
+            <td class="data">
+              <img src="assets/down-arrow.svg" alt="Credit" class="eachArrow" />
+            </td>
+            <td class="eachName">Bilnk It</td>
+            <td class="eachDate">15/03/2024</td>
+            <td class="eachType">Credited</td>
+            <td class="eachDesc">IMPS 1234/UPI123456/DIleep Thotakura/PhonePe</td>
+            <td class="eachAmountCredit">$ 1,256.00</td>
+            <td class="eachTotamount">$ 1,11,256.00</td>
+          </tr>
+          <tr class="eachData">
+            <td class="data">
+              <img src="assets/down-arrow.svg" alt="Credit" class="eachArrow" />
+            </td>
+            <td class="eachName">Bilnk It</td>
+            <td class="eachDate">15/03/2024</td>
+            <td class="eachType">Credited</td>
+            <td class="eachDesc">IMPS 1234/UPI123456/DIleep Thotakura/PhonePe</td>
+            <td class="eachAmountCredit">$ 1,256.00</td>
+            <td class="eachTotamount">$ 1,11,256.00</td>
+          </tr>
+          <tr class="eachData">
+            <td class="data">
+              <img src="assets/upward-arrow.svg" alt="Debit" class="eachArrow" />
+            </td>
+            <td class="eachName">Zerofourty Brewering</td>
+            <td class="eachDate">15/03/2024</td>
+            <td class="eachType">Debited</td>
+            <td class="eachDesc">123456/Fusion Restro</td>
+            <td class="eachAmountDebit">$ 1,256.00</td>
+            <td class="eachTotamount">$ 1,10,256.00</td>
+          </tr>
+          <tr class="eachData">
+            <td class="data">
+              <img src="assets/down-arrow.svg" alt="Credit" class="eachArrow" />
+            </td>
+            <td class="eachName">Bilnk It</td>
+            <td class="eachDate">15/03/2024</td>
+            <td class="eachType">Credited</td>
+            <td class="eachDesc">IMPS 1234/UPI123456/DIleep Thotakura/PhonePe</td>
+            <td class="eachAmountCredit">$ 1,256.00</td>
+            <td class="eachTotamount">$ 1,11,256.00</td>
+          </tr>
+          <tr class="eachData">
+            <td class="data">
+              <img src="assets/upward-arrow.svg" alt="Debit" class="eachArrow" />
+            </td>
+            <td class="eachName">Zerofourty Brewering</td>
+            <td class="eachDate">15/03/2024</td>
+            <td class="eachType">Debited</td>
+            <td class="eachDesc">123456/Fusion Restro</td>
+            <td class="eachAmountDebit">$ 1,256.00</td>
+            <td class="eachTotamount">$ 1,10,256.00</td>
+          </tr>
+          <tr class="eachData">
+            <td class="data">
+              <img src="assets/upward-arrow.svg" alt="Debit" class="eachArrow" />
+            </td>
+            <td class="eachName">Zerofourty Brewering</td>
+            <td class="eachDate">15/03/2024</td>
+            <td class="eachType">Debited</td>
+            <td class="eachDesc">123456/Fusion Restro</td>
+            <td class="eachAmountDebit">$ 1,256.00</td>
+            <td class="eachTotamount">$ 1,10,256.00</td>
+          </tr>
+          <tr class="eachData">
+            <td class="data">
+              <img src="assets/down-arrow.svg" alt="Credit" class="eachArrow" />
+            </td>
+            <td class="eachName">Bilnk It</td>
+            <td class="eachDate">15/03/2024</td>
+            <td class="eachType">Credited</td>
+            <td class="eachDesc">IMPS 1234/UPI123456/DIleep Thotakura/PhonePe</td>
+            <td class="eachAmountCredit">$ 1,256.00</td>
+            <td class="eachTotamount">$ 1,11,256.00</td>
+          </tr>
+        </table>
+      </div>
+      <!-- User Transaction History Tab -->
+      <div class="tab-pane" [ngClass]="{ active: activeTab === 2 }">
+        <!-- Tansaction Inputs -->
+        <form [formGroup]="mainView" (ngSubmit)="onMainView()">
+          <div class="d-flex mt-4" *ngIf="!isfetchByDate" (click)="viewByDate()">
+            <div class="form-check transfield" >
+              <input
+                class="form-check-input"
+                type="radio"
+                name="flexRadioDefault"
+                id="flexRadioDefault1"
+                formControlName="withDate"
+                value="Transaction Date"
+                name="withDate"
+              />
+              <label class="form-check-label" for="flexRadioDefault1">
+                Transaction Date
+              </label>
+            </div>
+            <div class="d-flex">
+              <div class="d-flex Duration">
+                <label class="lableText me-3"><p>From</p></label>
+                <input class="form-control Field" type="date" />
+              </div>
+              <div class="d-flex ToDate">
+                <label class="lableText me-3"><p>To</p></label>
+                <input class="form-control Field" type="date" />
+              </div>
+            </div>
+          </div>
+          <div class="d-flex mt-3" *ngIf="!isfetchByPeriod" (click)="viewByPeriod()">
+            <div class="form-check transfield">
+              <input
+                class="form-check-input"
+                type="radio"
+                name="flexRadioDefault"
+                id="flexRadioDefault2"
+                formControlName="withPeriod"
+                value="Transaction Period"
+                name="withPeriod"
+              />
+              <label class="form-check-label" for="flexRadioDefault2">
+                Transaction Period
+              </label>
+            </div>
+            <div class="d-flex">
+              <label class="lableText me-3"><p>Select</p></label>
+              <select class="form-select Field" name="duration" id="duration">
+                <option value="7">Last 7 Days</option>
+                <option value="14">Last 14 Days</option>
+              </select>
+            </div>
+          </div>
+          <div class="d-flex justify-content-end">
+            <button class="cancelBtn me-2" (click)="cancelView()">CANCEL</button>
+            <button class="showBtn me-2">SHOW</button>
+          </div>
+        </form>
+        
+        
+        <!-- Displaying Transaction Data -->
+        <div class="tabArea mt-2">
+          <table class="table tabFont">
+            <thead class="tabHead">
+              <th class="p-2 text-center">Sl.No</th>
+              <th class="p-2">Value Date</th>
+              <th class="p-2">Transaction Date</th>
+              <th class="p-2">Transaction Remarks</th>
+              <th class="p-2 text-end">Withdrawal Amount</th>
+              <th class="p-2">Deposit Amount</th>
+              <th class="p-2">Balance</th>
+              <th class="p-2 text-end">Day Closing Balance</th>
+            </thead>
+            <tbody class="tabData">
+              <tr class="eachRow">
+                <td class="text-center" style="padding: 10px">01</td>
+                <td style="padding: 10px">18/03/2024</td>
+                <td style="padding: 10px">18/03/2024</td>
+                <td style="padding: 10px">
+                  VIN/BLINKIT/202403031436/4063-09545745/Phone pe/Blinkit
+                </td>
+                <td class="text-end" style="padding: 10px">314.45</td>
+                <td></td>
+                <td style="padding: 10px">1109.82</td>
+                <td class="text-end" style="padding: 10px">1109.82</td>
+              </tr>
+              <tr class="eachRow">
+                <td class="text-center" style="padding: 10px">01</td>
+                <td style="padding: 10px">18/03/2024</td>
+                <td style="padding: 10px">18/03/2024</td>
+                <td style="padding: 10px">
+                  VIN/BLINKIT/202403031436/4063-09545745/Phone pe/Blinkit
+                </td>
+                <td class="text-end" style="padding: 10px">314.45</td>
+                <td></td>
+                <td style="padding: 10px">1109.82</td>
+                <td class="text-end" style="padding: 10px">1109.82</td>
+              </tr>
+              <tr class="eachRow">
+                <td class="text-center" style="padding: 10px">01</td>
+                <td style="padding: 10px">18/03/2024</td>
+                <td style="padding: 10px">18/03/2024</td>
+                <td style="padding: 10px">
+                  VIN/BLINKIT/202403031436/4063-09545745/Phone pe/Blinkit
+                </td>
+                <td class="text-end" style="padding: 10px">314.45</td>
+                <td></td>
+                <td style="padding: 10px">1109.82</td>
+                <td class="text-end" style="padding: 10px">1109.82</td>
+              </tr>
+              <tr class="eachRow">
+                <td class="text-center" style="padding: 10px">01</td>
+                <td style="padding: 10px">18/03/2024</td>
+                <td style="padding: 10px">18/03/2024</td>
+                <td style="padding: 10px">
+                  VIN/BLINKIT/202403031436/4063-09545745/Phone pe/Blinkit
+                </td>
+                <td class="text-end" style="padding: 10px">314.45</td>
+                <td></td>
+                <td style="padding: 12px">1109.82</td>
+                <td class="text-end" style="padding: 10px">1109.82</td>
+              </tr>
+              <tr class="eachRow">
+                <td class="text-center" style="padding: 10px">01</td>
+                <td style="padding: 10px">18/03/2024</td>
+                <td style="padding: 10px">18/03/2024</td>
+                <td style="padding: 10px">
+                  VIN/BLINKIT/202403031436/4063-09545745/Phone pe/Blinkit
+                </td>
+                <td class="text-end" style="padding: 10px">314.45</td>
+                <td></td>
+                <td style="padding: 10px">1109.82</td>
+                <td class="text-end" style="padding: 10px">1109.82</td>
+              </tr>
+              <tr class="eachRow">
+                <td class="text-center" style="padding: 10px">01</td>
+                <td style="padding: 10px">18/03/2024</td>
+                <td style="padding: 10px">18/03/2024</td>
+                <td style="padding: 10px">
+                  VIN/BLINKIT/202403031436/4063-09545745/Phone pe/Blinkit
+                </td>
+                <td class="text-end" style="padding: 10px">314.45</td>
+                <td></td>
+                <td style="padding: 10px">1109.82</td>
+                <td class="text-end" style="padding: 10px">1109.82</td>
+              </tr>
+              <tr class="lastRow">
+                <td class="text-center" style="padding: 10px">01</td>
+                <td style="padding: 10px">18/03/2024</td>
+                <td style="padding: 10px">18/03/2024</td>
+                <td style="padding: 10px">
+                  VIN/BLINKIT/202403031436/4063-09545745/Phone pe/Blinkit
+                </td>
+                <td class="text-end" style="padding: 10px">314.45</td>
+                <td></td>
+                <td style="padding: 10px">1109.82</td>
+                <td class="text-end" style="padding: 10px">1109.82</td>
+              </tr>
+              <tr>
+                <td colspan="8">
+                  <div class="Pagearea">
+                    <div class="perPageArea d-flex">
+                      <div>
+                        <p class="mt-3 rowsPg">Rows Per Page</p>
+                      </div>
+                      <div>
+                        <select
+                          class="form-select mt-2 ms-3 ps-3 pe-3 rounded-0"
+                          name="page"
+                          id="page"
+                        >
+                          <option value="25">25</option>
+                          <option value="45">45</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="d-flex paginationArea">
+                      <nav aria-label="Page navigation example">
+                        <ul class="pagination">
+                          <li class="page-item">
+                            <a class="page-link mt-1 rounded-0 border-0" aria-label="Previous">
+                              <img
+                        src="assets/left-arrow.svg"
+                        class="leftArrow"
+                        alt=""
+                      /> </a>
+                          </li>
+                          <li class="page-item ">
+                            <a class="page-link pgNo firstPg mt-2 ms-2 border-0">01</a>
+                          </li>
+                          <li class="page-item">
+                            <a class="page-link pgNo mt-2 border-0 ms-2 rowsPg">02</a>
+                          </li>
+                          <li class="page-item">
+                            <a class="page-link pgNo mt-2 border-0 ms-2 rowsPg" >03</a>
+                          </li>
+                          <li class="page-item">
+                            <a class="page-link pgNo mt-2  border-0 ms-2  rowsPg" >04</a>
+                          </li>
+                          <li class="page-item">
+                            <a class="page-link pgNo mt-2  border-0 ms-2 rowsPg" >05</a>
+                          </li>
+                          <li class="page-item">
+                            <a class="page-link pgNo mt-2  border-0 rowsPg"><span class="dot mb-1"></span></a>
+                          </li>
+                          <li class="page-item">
+                            <a class="page-link pgNo mt-2  border-0 rowsPg"><span class="dot mb-1"></span></a>
+                          </li>
+                          <li class="page-item">
+                            <a class="page-link pgNo mt-2  border-0 rowsPg"><span class="dot mb-1"></span></a>
+                          </li>
+                          <li class="page-item">
+                            <a class="page-link pgNo mt-2  border-0 rowsPg"><span class="dot mb-1"></span></a>
+                          </li>
+                          <li class="page-item">
+                            <a class="page-link pgNo mt-2 border-0 rowsPg"><span class="dot mb-1"></span></a>
+                          </li>
+                          <li class="page-item">
+                            <a class="page-link pgNo mt-2  border-0 rowsPg"><span class="dot mb-1"></span></a>
+                          </li>
+                          <li class="page-item">
+                            <a class="page-link pgNo mt-2  border-0 rowsPg"><span class="dot mb-1"></span></a>
+                          </li>
+                          <li class="page-item">
+                            <a class="page-link pgNo mt-2  border-0 rowsPg"><span class="dot mb-1"></span></a>
+                          </li>
+                          <li class="page-item">
+                            <a class="page-link pgNo mt-2  border-0 rowsPg" >12</a>
+                          </li>
+                          <li class="page-item">
+                            <a class="page-link mt-1 rounded-0 border-0">
+                              <img
+                                src="assets/right-arrow.svg"
+                                alt="RightArrow"
+                              />
+                            </a>
+                          </li>
+                        </ul>
+                      </nav>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <!-- Account Statement Tab -->
+      <div class="tab-pane" [ngClass]="{ active: activeTab === 3 }">
+        <!-- Download Form -->
+        <div class="mt-2">
+          <div class="d-flex mt-4 justify-content-center">
+            <div class="form-check transfield">
+              <input
+                class="form-check-input"
+                type="radio"
+                name="flexRadioDefault"
+                id="flexRadioDefault3"
+              />
+              <label class="form-check-label" for="flexRadioDefault3">
+                Transaction Date
+              </label>
+            </div>
+            <div class="d-flex">
+              <div class="d-flex Duration">
+                <label class="lableText me-3"><p>From</p></label>
+                <input class="form-control Field" type="date" />
+              </div>
+              <div class="d-flex ToDate">
+                <label class="lableText me-3"><p>To</p></label>
+                <input class="form-control Field" type="date" />
+              </div>
+            </div>
+          </div>
+          <div class="d-flex mt-3 statementTransPeriod">
+            <div class="form-check transfield">
+              <input
+                class="form-check-input"
+                type="radio"
+                name="flexRadioDefault"
+                id="flexRadioDefault4"
+              />
+              <label class="form-check-label" for="flexRadioDefault4">
+                Transaction Period
+              </label>
+            </div>
+            <div class="d-flex">
+              <label class="lableText me-3"><p>Select</p></label>
+              <select class="form-select Field" name="duration" id="duration">
+                <option value="7">Last 7 Days</option>
+                <option value="14">Last 14 Days</option>
+              </select>
+            </div>
+          </div>
+          <div class="mt-3 d-flex downloadDetails">
+            <p class="DownloadText">Download details as</p>
+            <div class="d-flex justify-content-center">
+              <label class="lableText me-3 mt-2 ms-3"><p>Select</p></label>
+              <select
+                class="form-select Field"
+                name="downloadFile"
+                id="downloadFile"
+              >
+                <option value="pdf">PDF File</option>
+                <option value="excel">Excel Sheet</option>
+              </select>
+            </div>
+          </div>
+          <div class="d-flex justify-content-center mt-4">
+            <button class="m-1 cancelBtn">cancel</button>
+            <button class="m-1 downloadBtn">download</button>
+          </div>
+        </div>
+      </div>
+    </main>
+  </section>
+  
+

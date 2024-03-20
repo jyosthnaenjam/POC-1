@@ -18,6 +18,7 @@ import { AccountHolderDetailsComponent } from './dashboard/account-details/accou
 import { MultipleAccountsComponent } from './dashboard/account-details/multiple-accounts/multiple-accounts.component';
 import { AccountSummaryComponent } from './dashboard/account-details/account-summary/account-summary.component';
 import { AccountDashboardComponent } from './dashboard/account-details/account-dashboard/account-dashboard.component';
+import { TabviewsComponent } from './dashboard/account-details/tabviews/tabviews.component';
 
 @NgModule({
   declarations: [
@@ -34,6 +35,7 @@ import { AccountDashboardComponent } from './dashboard/account-details/account-d
     MultipleAccountsComponent,
     AccountSummaryComponent,
     AccountDashboardComponent,
+    TabviewsComponent,
     
   ],
   imports: [
