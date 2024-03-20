@@ -1,0 +1,25 @@
+.modal-header{
+    background: #1B154C;
+
+}
+.can-btn{
+	padding: 8px 12px;
+	border-radius: 4px;
+	gap: 4px;
+	background: #E5E6E6;
+
+}
+.fet-btn{
+	padding: 8px 12px;
+	border-radius: 4px;
+	gap: 4px;
+  	background: #1B154C;
+	color: #FFFFFF;
+
+}
+.br-none{
+	border-top: none !important;
+}
+/* .ng-invalid.ng-touched {
+    border-color: red;
+} */

@@ -1,0 +1,134 @@
+<div class="container">
+	<div class="row">
+		<div class="col-md-5 ps-3">
+			<h2 class="text-center mt-3">Welcome!</h2>
+		<form [formGroup]="registrationForm" (ngSubmit)="onSubmit(registrationForm.value)">
+			<div class="row">
+				<div class="col-md-6">
+					<div class="form-group">
+						<label for="firstName">First Name<span class="text-danger">*</span></label>
+						<input type="text" id="firstName" class="form-control" formControlName="firstName" placeholder="FirstName">
+						<div *ngIf="registrationForm.get('firstName')?.invalid && registrationForm.get('firstName')?.touched"
+								 class="text-danger">First Name is required</div>
+					</div>
+				</div>
+				<div class="col-md-6">
+					<div class="form-group">
+						<label for="lastName">Last Name<span class="text-danger">*</span></label>
+						<input type="text" id="lastName" class="form-control" formControlName="lastName" placeholder="LastName">
+						<div *ngIf="registrationForm.get('lastName')?.invalid && registrationForm.get('lastName')?.touched"
+								 class="text-danger">Last Name is required</div>
+					</div>
+				</div>
+			</div>
+			<div class="form-group mt-3">
+				<label for="email">Email ID<span class="text-danger">*</span></label>
+				<input type="text" id="email" class="form-control" formControlName="email" placeholder="Email">
+				<div *ngIf="registrationForm.get('email')?.invalid && registrationForm.get('email')?.touched" class="text-danger">
+					Email is required.
+				</div>
+				<div *ngIf="registrationForm.get('email')?.hasError('email') && registrationForm.get('email')?.touched" class="text-danger">
+					Invalid email format.
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-6"><div class="form-group mt-3">
+					<label for="phoneNumber">Phone Number<span class="text-danger">*</span></label>
+					<input type="text" id="phoneNumber" class="form-control" formControlName="phoneNumber" placeholder="PhoneNumber">
+					<div *ngIf="registrationForm.get('phoneNumber')?.invalid && registrationForm.get('phoneNumber')?.touched" class="text-danger">
+						Phone number is required.
+					</div>
+					<div *ngIf="registrationForm.get('phoneNumber')?.invalid && registrationForm.hasError('pattern') && registrationForm.get('phoneNumber')?.touched">
+						Invalid phone number.
+					</div>
+				</div></div>
+				<div class="col-md-6">
+					<div class="form-group mt-3">
+						<label for="dob">Date of Birth<span class="text-danger">*</span></label>
+						<input type="date" id="dob" class="form-control" formControlName="dob" bsDatepicker placeholder="Date of Birth">
+						<div *ngIf="registrationForm.get('dob')?.invalid && registrationForm.get('dob')?.touched"
+								 class="text-danger">Date of Birth is required</div>
+					</div>
+				</div>
+			</div>
+			<div class="row mt-3">
+				<div class="col-md-6">
+					<div class="form-group">
+						<label for="country">Country:</label>
+						<select id="country" class="form-select" formControlName="country">
+							<option *ngFor="let country of countries" [value]="country">{{ country }}</option>
+						</select>
+						<div *ngIf="registrationForm.get('country')?.invalid && registrationForm.get('country')?.touched"
+								 class="text-danger">Please select a country</div>
+					</div>
+				</div>
+				<div class="col-md-6">
+					<div class="form-group">
+						<label for="state">State:</label>
+						<select id="state" class="form-select" formControlName="state">
+							<option *ngFor="let state of states" [value]="state">{{ state }}</option>
+						</select>
+						<div *ngIf="registrationForm.get('state')?.invalid && registrationForm.get('state')?.touched"
+								 class="text-danger">Please select a state</div>
+					</div>
+				</div>
+			</div>
+		
+			<div class="form-group mt-3">
+				<label for="address">Address<span class="text-danger">*</span></label>
+				<input type="text" id="address" class="form-control" formControlName="address" />
+				<div *ngIf="registrationForm.get('address')?.invalid && registrationForm.get('address')?.touched" class="text-danger">
+					Address is required
+					<!-- <div *ngIf="registrationForm.errors.pattern">Invalid characters in the address</div> -->
+				</div>
+			</div>
+			<!-- <div class="form-group mt-3">
+				<label for="zipcode">Zipcode<span class="text-danger">*</span></label>
+				<input type="text" id="zipcode" class="form-control" formControlName="zipcode" placeholder="Zipcode">
+				<div *ngIf="registrationForm.get('zipcode')?.invalid && registrationForm.get('zipcode')?.touched" class="text-danger">
+					Zipcode is required.
+				</div>
+				<div *ngIf="registrationForm.get('zipcode')?.hasError('pattern') && registrationForm.get('zipcode')?.touched" class="text-danger">
+					Invalid zipcode.
+				</div>
+			</div> -->
+			<div class="row mt-3">
+				<div class="col-md-6">
+					<div class="form-group">
+						<label for="password" class="form-label">Password<span class="text-danger">*</span></label>
+						<input type="password" class="form-control" id="password" formControlName="password" placeholder="Password">
+						<div *ngIf="registrationForm.get('password')?.invalid && registrationForm.get('password')?.touched" class="text-danger">
+							Password is required.
+						</div>
+						<div *ngIf="registrationForm.get('password')?.hasError('minlength')" class="text-danger">
+							Password must be at least 6 characters long.
+						</div>
+					</div>
+				</div>
+				<div class="col-md-6">
+					<div class="form-group">
+						<label for="confirmPassword" class="form-label">Confirm Password<span class="text-danger">*</span></label>
+						<input type="password" class="form-control" id="confirmPassword" formControlName="confirmPassword" placeholder="ConfirmPassword">
+						<div *ngIf="registrationForm.hasError('mismatch')" class="text-danger">
+							Passwords do not match.
+						</div>
+						<div *ngIf="registrationForm.get('confirmPassword')?.invalid && registrationForm.get('confirmPassword')?.touched"  class="text-danger">
+							<!-- <div *ngIf="registrationForm.get('confirmPassword')?.hasError('required')" class="text-danger"> -->
+							Confirmation password is required.
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="d-grid gap-2 mt-3">
+				<button type="submit" class="btn btn-primary">Submit</button>
+			</div>
+			<div class="text-center mt-4">
+				<span >Already had an account <a aria-current="page" routerLink="/login">Login Here</a></span>
+			</div>
+		</form>
+			</div>
+			<div class="col-md-7 ps-4">
+				<img [src]="imagePath" [width]="imageWidth" [height]="imageHeight" alt="Description">
+			</div>
+		</div>
+</div>

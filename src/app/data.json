@@ -1,0 +1,46 @@
+{
+    "register": [
+      {
+        "firstName": "GATTI",
+        "lastName": "DEVI",
+        "phoneNumber": "6302672994",
+        "email": "kgatti@evoketechnologies.com",
+        "country": "India",
+        "state": "Andhra Pradesh",
+        "dob": "2024-03-21",
+        "address": "Sri Nilayam",
+        "zipcode": "53500",
+        "password": "123456",
+        "confirmPassword": "123456",
+        "id": 1
+      },
+      {
+        "firstName": "Katyayani Devi",
+        "lastName": "Gatti",
+        "phoneNumber": "6302672994",
+        "email": "kgatti@evoketechnologies.com",
+        "country": "India",
+        "state": "Andhra Pradesh",
+        "dob": "2024-03-22",
+        "address": "Sri Nilayam",
+        "zipcode": "53500",
+        "password": "Kachu@2609",
+        "confirmPassword": "Kachu@2609",
+        "id": 2
+      },
+      {
+        "firstName": "Suguna",
+        "lastName": "Ganidpilli",
+        "phoneNumber": "1234567890",
+        "email": "admin@gmail.com",
+        "country": "USA",
+        "state": "Karnataka",
+        "dob": "2024-03-28",
+        "address": "Sri Nilayam",
+        "zipcode": "53500",
+        "password": "Suguna@123",
+        "confirmPassword": "Suguna@123",
+        "id": 3
+      }
+    ]
+  }

@@ -1,0 +1,18 @@
+{
+    "RegDetails":[
+        {
+            "id":1,
+            "firstName":"",
+            "lastName":"",
+            "phoneNumber":"",
+            "email":"",
+            "country":"",
+            "state":"",
+            "dob":"",
+            "address":"",
+            "zipcode":"",
+            "password":"",
+            "confirmPassword":""
+        }
+    ]
+}
