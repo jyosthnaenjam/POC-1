@@ -1,0 +1,107 @@
+.bg-container{
+    padding-top: 10px;
+ }
+ 
+ .savingsAccount{
+     /* width: 340px; */
+     width: 300px;
+     height: 180px;
+     flex-shrink: 0;
+     margin: 8px;
+     border-radius: 10px;
+     background: linear-gradient(0deg, #DA22FF 0%, #9733EE 100%);
+     padding: 10px;
+     opacity: 0.5;
+     cursor: pointer;
+ }
+ .loanAccount{
+     width: 300px;
+     /* width: 340px; */
+     height: 180px;
+     flex-shrink: 0;
+     margin: 8px;
+     border-radius: 10px;
+     background: linear-gradient(0deg, #EC6F66 0%, #F3A183 100%);
+     padding: 10px;
+     opacity: 0.5;
+     cursor: pointer;
+ }
+ .creditCard{
+     /* width: 340px; */
+     width: 300px;
+     height: 180px;
+     flex-shrink: 0;
+     margin: 8px;
+     border-radius: 10px;
+     background: linear-gradient(284deg, #00FFF0 -19.4%, #0083FE 54.6%);
+     padding: 10px;
+     opacity: 0.5;
+     cursor: pointer;
+ }
+ .overDraftAccount{
+     width: 300px;
+     /* width: 340px; */
+     height: 180px;
+     flex-shrink: 0;
+     margin: 8px;
+     border-radius: 10px;
+     background: linear-gradient(180deg, #81CEDF 0%, #9464FD 100%);
+     padding: 10px;
+     opacity: 0.5;
+     cursor: pointer;
+ }
+ .savingsAccount:hover,.loanAccount:hover,.creditCard:hover,.overDraftAccount:hover{
+     cursor: pointer;
+     opacity:1;
+ }
+ .circleIcon{
+     margin: 8px 0px 0px 8px;
+ }
+ .accountType{
+     color: #FFF;
+     font-family: Mulish;
+     font-size: 14px;
+     font-style: normal;
+     font-weight: 500;
+     line-height: normal;
+     margin: 10px 5px 0px 100px;
+ }
+ .accountNumber{
+     color: #FFF;
+     font-family: Mulish;
+     font-size: 20px;
+     font-style: normal;
+     font-weight: 800;
+     line-height: normal;
+     letter-spacing: 0.8px;
+     padding: 30px 0px 0px 10px;
+ }
+ .accountHolderName{
+     color: #FFF;
+     font-family: Mulish;
+     font-size: 14px;
+     font-style: normal;
+     font-weight: 500;
+     line-height: normal;
+     padding: 10px 0px 0px 10px;
+ }
+ .date{
+     color: #FFF;
+     font-family: Mulish;
+     font-size: 14px;
+     font-style: normal;
+     font-weight: 400;
+     line-height: normal;
+     padding: 10px 0px 0px 10px;
+ }
+ .accountTypeOverDraft{
+     color: #FFF;
+     font-family: Mulish;
+     font-size: 14px;
+     font-style: normal;
+     font-weight: 500;
+     line-height: normal;
+     /* margin: 10px 10px 0px 100px; */
+     margin: 10px;
+ 
+ }

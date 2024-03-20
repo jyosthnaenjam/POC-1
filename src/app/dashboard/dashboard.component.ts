@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { RegisterService } from '../register.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-dashboard',
@@ -16,10 +17,13 @@ export class DashboardComponent {
   ngOnInit(){
     this.username = this.service.trimmedString
   }
-  constructor(private service:RegisterService) { }
+  constructor(private service:RegisterService,private route:Router) { }
   // get currentUser() {
   //   return this.service.getCurrentUser();
   // }
+  gotoAccountDashboard(){
+    this.route.navigate(["/accountDashboard"])
+  }
 }
 
 

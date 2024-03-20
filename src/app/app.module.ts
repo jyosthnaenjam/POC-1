@@ -13,6 +13,11 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { AccountDetailsComponent } from './dashboard/account-details/account-details.component';
 import { PaymentsComponent } from './dashboard/payments/payments.component';
 import { FundTransferComponent } from './dashboard/fund-transfer/fund-transfer.component';
+import { NavbarComponent } from './dashboard/account-details/navbar/navbar.component';
+import { AccountHolderDetailsComponent } from './dashboard/account-details/account-holder-details/account-holder-details.component';
+import { MultipleAccountsComponent } from './dashboard/account-details/multiple-accounts/multiple-accounts.component';
+import { AccountSummaryComponent } from './dashboard/account-details/account-summary/account-summary.component';
+import { AccountDashboardComponent } from './dashboard/account-details/account-dashboard/account-dashboard.component';
 
 @NgModule({
   declarations: [
@@ -24,6 +29,11 @@ import { FundTransferComponent } from './dashboard/fund-transfer/fund-transfer.c
     AccountDetailsComponent,
     PaymentsComponent,
     FundTransferComponent,
+    NavbarComponent,
+    AccountHolderDetailsComponent,
+    MultipleAccountsComponent,
+    AccountSummaryComponent,
+    AccountDashboardComponent,
     
   ],
   imports: [
