@@ -35,4 +35,6 @@ export class RegisterService {
   getCurrentUser() {
     return this.currentUser;
   }
+
+  
 }
