@@ -6,6 +6,8 @@ import { ForgotInfoComponent } from './forgot-info/forgot-info.component';
 import { AuthGuard } from './guards/auth.guard';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { AccountDashboardComponent } from './dashboard/account-details/account-dashboard/account-dashboard.component';
+import { TransfersComponent } from './dashboard/transfers/transfers/transfers.component';
+import { AccountDetailsComponent } from './dashboard/account-details/account-details.component';
 
 
 const routes: Routes = [
@@ -15,7 +17,9 @@ const routes: Routes = [
   {path:'registration', component:RegistrationComponent},
   {path:'dashboard', component:DashboardComponent},
   { path: 'forgot-info', component: ForgotInfoComponent, canActivate: [AuthGuard] },
-  {path:"accountDashboard",component:AccountDashboardComponent}
+  {path:"accountDashboard",component:AccountDashboardComponent},
+  {path:'accountDetails',component:AccountDashboardComponent},
+  {path:"transfers",component:TransfersComponent}
 ];
 
 @NgModule({

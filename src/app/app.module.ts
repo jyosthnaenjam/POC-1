@@ -19,6 +19,8 @@ import { MultipleAccountsComponent } from './dashboard/account-details/multiple-
 import { AccountSummaryComponent } from './dashboard/account-details/account-summary/account-summary.component';
 import { AccountDashboardComponent } from './dashboard/account-details/account-dashboard/account-dashboard.component';
 import { TabviewsComponent } from './dashboard/account-details/tabviews/tabviews.component';
+import { TransfersComponent } from './dashboard/transfers/transfers/transfers.component';
+import { TransferAccountSummaryComponent } from './dashboard/transfers/transfer-account-summary/transfer-account-summary.component';
 
 @NgModule({
   declarations: [
@@ -36,6 +38,8 @@ import { TabviewsComponent } from './dashboard/account-details/tabviews/tabviews
     AccountSummaryComponent,
     AccountDashboardComponent,
     TabviewsComponent,
+    TransfersComponent,
+    TransferAccountSummaryComponent,
     
   ],
   imports: [
