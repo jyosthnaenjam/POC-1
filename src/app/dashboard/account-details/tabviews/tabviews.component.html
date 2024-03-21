@@ -53,7 +53,7 @@
       >
     </li>
   </ul>
-  
+
   <main class="tab-content mt-2">
     <!-- User Recent Transactions Tab -->
     <div class="tab-pane" [ngClass]="{ active: activeTab === 1 }">
@@ -175,63 +175,78 @@
     <!-- User Transaction History Tab -->
     <div class="tab-pane" [ngClass]="{ active: activeTab === 2 }">
       <!-- Tansaction Inputs -->
-      
-        <div class="d-flex mt-4 ms-4"  >
-          <div class="form-check transfield">
+
+      <div class="d-flex mt-4 ms-4">
+        <div class="form-check transfield">
+          <input
+            class="form-check-input"
+            type="radio"
+            name="flexRadioDefault"
+            id="flexRadioDefault1"
+            [disabled]="isDisableByPeriodfield"
+            (click)="disableDateField()"
+          />
+          <label class="form-check-label" for="flexRadioDefault1">
+            Transaction Date
+          </label>
+        </div>
+        <div class="d-flex">
+          <div class="d-flex Duration">
+            <label class="lableText me-3"><p>From</p></label>
             <input
-              class="form-check-input"
-              type="radio"
-              name="flexRadioDefault"
-              id="flexRadioDefault1"
+              class="form-control Field"
+              type="date"
               [disabled]="isDisableByPeriodfield"
-              (click)="disableDateField()"
+              [(ngModel)]="fromTransDate"
             />
-            <label class="form-check-label" for="flexRadioDefault1">
-              Transaction Date
-            </label>
           </div>
-          <div class="d-flex">
-            <div class="d-flex Duration">
-              <label class="lableText me-3"><p>From</p></label>
-              <input class="form-control Field" type="date" [disabled]="isDisableByPeriodfield"/>
-            </div>
-            <div class="d-flex ToDate">
-              <label class="lableText me-3"><p>To</p></label>
-              <input class="form-control Field" type="date" [disabled]="isDisableByPeriodfield"/>
-            </div>
-          </div>
-        </div>
-        <div class="d-flex mt-3 ms-4">
-          <div class="form-check transfield" >
+          <div class="d-flex ToDate">
+            <label class="lableText me-3"><p>To</p></label>
             <input
-              class="form-check-input"
-              type="radio"
-              name="flexRadioDefault"
-              id="flexRadioDefault2"
-              [disabled]="isDisablebyDatefield"
-              (click)="disablePeriodField()"
+              class="form-control Field"
+              type="date"
+              [disabled]="isDisableByPeriodfield"
+              [(ngModel)]="toTransDate"
+              min="{{ minRangeDate | date : 'yyyy-MM-dd' }}"
+              (click)="arrangeToDate()"
             />
-            <label class="form-check-label" for="flexRadioDefault2">
-              Transaction Period
-            </label>
-          </div>
-          <div class="d-flex">
-            <label class="lableText me-3"><p>Select</p></label>
-            <select class="form-select Field" name="duration" id="duration" [disabled]="isDisablebyDatefield">
-              <option value="7">Last 7 Days</option>
-              <option value="14">Last 14 Days</option>
-            </select>
           </div>
         </div>
-        <div class="d-flex justify-content-end">
-          <button class="cancelBtn me-2" (click)="cancelField()">CANCEL</button>
-          <button class="showBtn me-2">SHOW</button>
+      </div>
+      <div class="d-flex mt-3 ms-4">
+        <div class="form-check transfield">
+          <input
+            class="form-check-input"
+            type="radio"
+            name="flexRadioDefault"
+            id="flexRadioDefault2"
+            [disabled]="isDisablebyDatefield"
+            (click)="disablePeriodField()"
+          />
+          <label class="form-check-label" for="flexRadioDefault2">
+            Transaction Period
+          </label>
         </div>
-      
-      
-      
+        <div class="d-flex">
+          <label class="lableText me-3"><p>Select</p></label>
+          <select
+            class="form-select Field"
+            name="duration"
+            id="duration"
+            [disabled]="isDisablebyDatefield"
+          >
+            <option ngValue="sevenPeriodicDays">Last 7 Days</option>
+            <option ngValue="fourteenPeriodicDays">Last 14 Days</option>
+          </select>
+        </div>
+      </div>
+      <div class="d-flex justify-content-end mb-4">
+        <button class="cancelBtn me-2" (click)="cancelField()">CANCEL</button>
+        <button class="showBtn me-2" (click)="submitField()">SHOW</button>
+      </div>
+
       <!-- Displaying Transaction Data -->
-      <div class="tabArea mt-2">
+      <div class="tabArea mt-2" *ngIf="showData">
         <table class="table tabFont">
           <thead class="tabHead">
             <th class="p-2 text-center">Sl.No</th>
@@ -350,54 +365,84 @@
                     <nav aria-label="Page navigation example">
                       <ul class="pagination">
                         <li class="page-item">
-                          <a class="page-link mt-1 rounded-0 border-0" aria-label="Previous">
+                          <a
+                            class="page-link mt-1 rounded-0 border-0"
+                            aria-label="Previous"
+                          >
                             <img
-                      src="assets/left-arrow.svg"
-                      alt=""
-                      style="padding: 4px;"
-                    /> </a>
-                        </li>
-                        <li class="page-item ">
-                          <a class="page-link pgNo firstPg mt-2 ms-2 border-0">01</a>
+                              src="assets/left-arrow.svg"
+                              alt=""
+                              style="padding: 4px"
+                            />
+                          </a>
                         </li>
                         <li class="page-item">
-                          <a class="page-link pgNo mt-2 border-0 ms-2 rowsPg">02</a>
+                          <a class="page-link pgNo firstPg mt-2 ms-2 border-0"
+                            >01</a
+                          >
                         </li>
                         <li class="page-item">
-                          <a class="page-link pgNo mt-2 border-0 ms-2 rowsPg" >03</a>
+                          <a class="page-link pgNo mt-2 border-0 ms-2 rowsPg"
+                            >02</a
+                          >
                         </li>
                         <li class="page-item">
-                          <a class="page-link pgNo mt-2  border-0 ms-2  rowsPg" >04</a>
+                          <a class="page-link pgNo mt-2 border-0 ms-2 rowsPg"
+                            >03</a
+                          >
                         </li>
                         <li class="page-item">
-                          <a class="page-link pgNo mt-2  border-0 ms-2 rowsPg" >05</a>
+                          <a class="page-link pgNo mt-2 border-0 ms-2 rowsPg"
+                            >04</a
+                          >
                         </li>
                         <li class="page-item">
-                          <a class="page-link pgNo mt-2  border-0 rowsPg"><span class="dot mb-1"></span></a>
+                          <a class="page-link pgNo mt-2 border-0 ms-2 rowsPg"
+                            >05</a
+                          >
                         </li>
                         <li class="page-item">
-                          <a class="page-link pgNo mt-2  border-0 rowsPg"><span class="dot mb-1"></span></a>
+                          <a class="page-link pgNo mt-2 border-0 rowsPg"
+                            ><span class="dot mb-1"></span
+                          ></a>
                         </li>
                         <li class="page-item">
-                          <a class="page-link pgNo mt-2  border-0 rowsPg"><span class="dot mb-1"></span></a>
+                          <a class="page-link pgNo mt-2 border-0 rowsPg"
+                            ><span class="dot mb-1"></span
+                          ></a>
                         </li>
                         <li class="page-item">
-                          <a class="page-link pgNo mt-2  border-0 rowsPg"><span class="dot mb-1"></span></a>
+                          <a class="page-link pgNo mt-2 border-0 rowsPg"
+                            ><span class="dot mb-1"></span
+                          ></a>
                         </li>
                         <li class="page-item">
-                          <a class="page-link pgNo mt-2 border-0 rowsPg"><span class="dot mb-1"></span></a>
+                          <a class="page-link pgNo mt-2 border-0 rowsPg"
+                            ><span class="dot mb-1"></span
+                          ></a>
                         </li>
                         <li class="page-item">
-                          <a class="page-link pgNo mt-2  border-0 rowsPg"><span class="dot mb-1"></span></a>
+                          <a class="page-link pgNo mt-2 border-0 rowsPg"
+                            ><span class="dot mb-1"></span
+                          ></a>
                         </li>
                         <li class="page-item">
-                          <a class="page-link pgNo mt-2  border-0 rowsPg"><span class="dot mb-1"></span></a>
+                          <a class="page-link pgNo mt-2 border-0 rowsPg"
+                            ><span class="dot mb-1"></span
+                          ></a>
                         </li>
                         <li class="page-item">
-                          <a class="page-link pgNo mt-2  border-0 rowsPg"><span class="dot mb-1"></span></a>
+                          <a class="page-link pgNo mt-2 border-0 rowsPg"
+                            ><span class="dot mb-1"></span
+                          ></a>
                         </li>
                         <li class="page-item">
-                          <a class="page-link pgNo mt-2  border-0 rowsPg" >12</a>
+                          <a class="page-link pgNo mt-2 border-0 rowsPg"
+                            ><span class="dot mb-1"></span
+                          ></a>
+                        </li>
+                        <li class="page-item">
+                          <a class="page-link pgNo mt-2 border-0 rowsPg">12</a>
                         </li>
                         <li class="page-item">
                           <a class="page-link mt-1 rounded-0 border-0">
@@ -420,6 +465,7 @@
     <!-- Account Statement Tab -->
     <div class="tab-pane" [ngClass]="{ active: activeTab === 3 }">
       <!-- Download Form -->
+
       <div class="mt-2 mb-4">
         <div class="d-flex mt-4 justify-content-center">
           <div class="form-check transfield">
@@ -479,7 +525,9 @@
           </div>
         </div>
         <div class="d-flex justify-content-center mt-4">
-          <button class="m-1 cancelBtn">cancel</button>
+          <button class="m-1 cancelBtn" (click)="cancelStatement()">
+            cancel
+          </button>
           <button class="m-1 downloadBtn">download</button>
         </div>
       </div>
