@@ -1,4 +1,4 @@
-<div class="container-fluid">
+<!-- <div class="container-fluid">
     <div class="accordion-item m-2">
         <div class="accountSummary d-flex flex-row justify-content-between">
             <p class="summary">Account Summary</p>
@@ -35,6 +35,43 @@
           </div>
         </div>
       </div>
+</div> -->
+
+<div class="container-fluid">
+    <div class="accordion-item m-2">
+        <div class="accountSummary d-flex flex-row justify-content-between">
+            <p class="summary">Account Summary</p>
+                <div class="form-check form-switch d-flex flex-row m-3">
+                    <p class="hide">Hide</p>
+                    <input class="form-check-input collapsed" type="checkbox" role="switch" id="flexSwitchCheckDefault" (click)="showData()" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                    <p class="show">Show</p>
+                </div>
+          </div>
+        <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+          <div class="accordion-body">
+            <div class="accountDetails d-flex flex-row justify-content-between p-3 mb-3" *ngIf="isDisplay">
+                <div *ngFor="let data of loanAccountSummary">
+                    <p class="accountHeading">Account Holder Name</p>
+                     <p class="accountValues">{{data.AccountHolder}}</p>
+                </div>
+                 <div *ngFor="let data of loanAccountSummary">
+                     <p class="accountHeading">Account Type</p>
+                     <p class="accountValues">{{data.AccountType}}</p>
+                 </div>
+                 <div *ngFor="let data of loanAccountSummary">
+                     <p class="accountHeading">Account Number</p>
+                     <p class="accountValues">{{data.AccountNumber}}</p>
+                 </div>
+                 <div *ngFor="let data of loanAccountSummary">
+                     <p class="accountHeading">Account Branch</p>
+                     <p class="accountValues">{{data.AccountBranch}}</p>
+                 </div>
+                 <div *ngFor="let data of loanAccountSummary">
+                     <p class="accountHeading">Available Balance in Rupees</p>
+                     <p class="accountValues">{{data.AvailableBalanceinRupees}}</p>
+                 </div>
+           </div>
+          </div>
+        </div>
       </div>
-
-
+</div>

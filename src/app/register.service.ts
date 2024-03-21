@@ -35,6 +35,15 @@ export class RegisterService {
   getCurrentUser() {
     return this.currentUser;
   }
-
   
+  accountObj={
+    AccountHolder:"Thotakura Dileep",
+    AccountType:"Savings Account",
+    AccountNumber:"1234567890111213",
+    AccountBranch:"KPHB",
+    AvailableBalanceinRupees:"1,81,680/-"
+  }
+ 
+  
+
 }
