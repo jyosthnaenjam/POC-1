@@ -152,6 +152,7 @@
 
 .tabData{
   border: 1px solid #d9d9da;
+  background: #fff;
 }
 .tabHead {
   border-collapse: collapse;
@@ -249,7 +250,7 @@
 
 .statementTransPeriod,
 .downloadDetails {
-  margin-left: 205px;
+  margin-left: 198px;
 }
 
 .DownloadText {
