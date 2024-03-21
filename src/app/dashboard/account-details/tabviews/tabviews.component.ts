@@ -27,6 +27,11 @@ export class TabviewsComponent {
   activateTab(tabNo: number) {
     this.activeTab = tabNo;
   }
+
+  cancelField(){
+    this.isDisablebyDatefield = false;
+  this.isDisableByPeriodfield = false;
+  }
   
   
     
