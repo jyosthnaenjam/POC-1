@@ -1,282 +1,274 @@
-*{
-    font-family: "Inter";
-}
 .nav-item {
-    cursor: pointer;
-    font-style: normal;
-    font-weight: 700;
-    line-height: normal;
-  }
-  
-  .data {
-    padding: 10px;
-  }
-  
-  .eachArrow {
-    width: 26px;
-    height: 26px;
-    flex-shrink: 0;
-  }
-  
-  .eachName {
-    color: #1f1f1f;
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: normal;
-  }
-  
-  .eachDate,
-  .eachType {
-    color: #494848;
-    font-size: 14px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: normal;
-  }
-  
-  .eachAmountCredit {
-    color: #3d8300;
-    font-size: 14px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: normal;
-  }
-  
-  .eachAmountDebit {
-    color: #d31b03;
-    font-size: 14px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: normal;
-  }
-  
-  .eachTotamount {
-    color: #082341;
-    font-size: 14px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: normal;
-  }
-  
-  .transfield,
-  .DownloadText {
-    color: #082341;
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: normal;
-  }
-  
-  .form-check-input:not(:checked) {
-    background-color: #fef0f0;
-    border: 2px solid #1b154c;
-    cursor: pointer;
-  }
-  
-  .form-check-input:checked {
-    background-color: #1b154c;
-    border: 2px solid #fef0f0;
-    cursor: pointer;
-  }
-  
-  .Field {
-    width: 216px;
-    height: 36px;
-    flex-shrink: 0;
-    border-radius: 2px;
-    border: 1px solid #d2d2d2;
-  }
-  
-  .lableText {
-    color: #082341;
-    font-size: 12px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: normal;
-    margin-top: 7px;
-    padding-left: 30px;
-  }
-  
-  .Duration {
-    padding-left: 20px;
-  }
-  
-  .ToDate {
-    padding-left: 100px;
-  }
-  
-  .cancelBtn {
-    width: 100px;
-    height: 28px;
-    flex-shrink: 0;
-    border: 1px solid #082341;
-    background: #fff;
-    color: #082341;
-    text-align: center;
-    font-size: 12px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-    letter-spacing: 0.12px;
-    text-transform: uppercase;
-  }
-  
-  .showBtn {
-    width: 100px;
-    height: 28px;
-    flex-shrink: 0;
-    background: #082341;
-    color: #fff;
-    text-align: center;
-    font-size: 12px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: normal;
-    letter-spacing: 0.12px;
-    text-transform: uppercase;
-  }
-  
-  .tabArea {
-    padding: 10px;
-    flex-shrink: 0;
-  }
-  
-  .tabFont {
-    height: 36px;
-    flex-shrink: 0;
-    color: #37383a;
-    font-size: 12px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: normal;
-    text-transform: capitalize;
-  }
-  
-  .tabData{
-    border: 1px solid #d9d9da;
-  }
+  cursor: pointer;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
 
-  .tabHead {
-    border-collapse: collapse;
-    border: 1px solid #d9d9da;
-    background: #f2f2f2;
-  }
-  
-  .eachRow {
-    border-bottom: 2px solid #fff;
-  }
-  
-  .lastRow {
-    border-bottom: 1px solid #d9d9da;
-  }
-  
-  .tabPage {
-    height: 60px;
-    border: 1px solid #d9d9da;
-  }
-  
-  .Pagearea {
-    display: flex;
-    justify-content: space-between;
-  }
-  
-  .pagNumbers {
-    list-style-type: none;
-  }
-  
-  .arrowSpace {
-    margin-top: 12px;
-    margin-left: 8px;
-  }
-  
-  .selectedPg {
-    background: #082341;
-    color: #fff;
-    font-size: 12px;
-    cursor: pointer;
-    font-style: normal;
-    font-weight: 700;
-    padding: 5px 4px 4px 5px;
-    line-height: normal;
-    text-transform: capitalize;
-  }
-  
-  .firstPg{
-    background:#082341 ;
-    color: #fff;
-    font-size: 12px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: normal;
-  }
-  
-  .pageDots {
-    width: 4px;
-    height: 4px;
-    flex-shrink: 0;
-    background: #d9d9d9;
-    border-radius: 10px;
-  }
-  
-  .dot {
-    height: 4px;
-    width: 4px;
-    background: #d9d9d9;
-    border-radius: 50%;
-    display: inline-block;
-  }
-  
-  .rowsPg {
-    color: #979797;
-    font-size: 12px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: normal;
-  }
-  
-  .paginationArea {
-    width: 482px;
-    height: 45px;
-    flex-shrink: 0;
-    border: 1px solid #d5d5d5;
-    background: #fff;
-    padding: 1px;
-    cursor: pointer;
-  }
-  
-  .pgNo{
-    padding: 8.5px;
-  }
-  
-  .leftArrow{
-    padding: 4px;
-  }
-  
-  
-  .statementTransPeriod,
-  .downloadDetails {
-    margin-left: 192px;
-  }
-  
-  .DownloadText {
-    margin-top: 5px;
-  }
-  
-  .downloadBtn {
-    width: 140px;
-    height: 28px;
-    flex-shrink: 0;
-    background: #082341;
-    color: #fff;
-    text-align: center;
-    font-size: 12px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: normal;
-    letter-spacing: 0.12px;
-    text-transform: uppercase;
-  }
-  
-  
-  
+.data {
+  padding: 10px;
+}
+
+.eachArrow {
+  width: 26px;
+  height: 26px;
+  flex-shrink: 0;
+}
+
+.eachName {
+  color: #1f1f1f;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.eachDate,
+.eachType {
+  color: #494848;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.eachAmountCredit {
+  color: #3d8300;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.eachAmountDebit {
+  color: #d31b03;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.eachTotamount {
+  color: #082341;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.transfield,
+.DownloadText {
+  color: #082341;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.form-check-input:not(:checked) {
+  background-color: #fef0f0;
+  border: 2px solid #1b154c;
+  cursor: pointer;
+}
+
+.form-check-input:checked {
+  background-color: #1b154c;
+  border: 2px solid #fef0f0;
+  cursor: pointer;
+}
+
+.Field {
+  width: 216px;
+  height: 36px;
+  flex-shrink: 0;
+  border-radius: 2px;
+  border: 1px solid #d2d2d2;
+}
+
+.lableText {
+  color: #082341;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  margin-top: 7px;
+  padding-left: 30px;
+}
+
+.Duration {
+  padding-left: 20px;
+}
+
+.ToDate {
+  padding-left: 100px;
+}
+
+.cancelBtn {
+  width: 100px;
+  height: 28px;
+  flex-shrink: 0;
+  border: 1px solid #082341;
+  background: #fff;
+  color: #082341;
+  text-align: center;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 0.12px;
+  text-transform: uppercase;
+}
+
+.showBtn {
+  width: 100px;
+  height: 28px;
+  flex-shrink: 0;
+  background: #082341;
+  color: #fff;
+  text-align: center;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 0.12px;
+  text-transform: uppercase;
+}
+
+.tabArea {
+  padding: 10px;
+  flex-shrink: 0;
+}
+
+.tabFont {
+  height: 36px;
+  flex-shrink: 0;
+  color: #37383a;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  text-transform: capitalize;
+}
+
+.tabData{
+  border: 1px solid #d9d9da;
+}
+.tabHead {
+  border-collapse: collapse;
+  border: 1px solid #d9d9da;
+  background: #f2f2f2;
+}
+
+.eachRow {
+  border-bottom: 2px solid #fff;
+}
+
+.lastRow {
+  border-bottom: 1px solid #d9d9da;
+}
+
+.tabPage {
+  height: 60px;
+  border: 1px solid #d9d9da;
+}
+
+.Pagearea {
+  display: flex;
+  justify-content: space-between;
+}
+
+.pagNumbers {
+  list-style-type: none;
+}
+
+.arrowSpace {
+  margin-top: 12px;
+  margin-left: 8px;
+}
+
+.selectedPg {
+  background: #082341;
+  color: #fff;
+  font-size: 12px;
+  cursor: pointer;
+  font-style: normal;
+  font-weight: 700;
+  padding: 5px 4px 4px 5px;
+  line-height: normal;
+  text-transform: capitalize;
+}
+
+.firstPg{
+  background:#082341 ;
+  color: #fff;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.pageDots {
+  width: 4px;
+  height: 4px;
+  flex-shrink: 0;
+  background: #d9d9d9;
+  border-radius: 10px;
+}
+
+.dot {
+  height: 4px;
+  width: 4px;
+  background: #d9d9d9;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.rowsPg {
+  color: #979797;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.paginationArea {
+  width: 482px;
+  height: 45px;
+  flex-shrink: 0;
+  border: 1px solid #d5d5d5;
+  background: #fff;
+  padding: 1px;
+  cursor: pointer;
+}
+
+.pgNo{
+  padding: 8.5px;
+}
+
+
+
+.statementTransPeriod,
+.downloadDetails {
+  margin-left: 205px;
+}
+
+.DownloadText {
+  margin-top: 5px;
+}
+
+.downloadBtn {
+  width: 140px;
+  height: 28px;
+  flex-shrink: 0;
+  background: #082341;
+  color: #fff;
+  text-align: center;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 0.12px;
+  text-transform: uppercase;
+}
+
+
