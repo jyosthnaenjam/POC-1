@@ -51,6 +51,7 @@
     font-style: normal;
     font-weight: 500;
     line-height: normal;
+    text-align: start;
 }
 .accountValues{
     color: #082341;
@@ -60,6 +61,7 @@
     font-weight: 800;
     line-height: normal;
     letter-spacing: 0.36px;
+    text-align: start;
 }
 .accountDetails{
     width: 1230px;
