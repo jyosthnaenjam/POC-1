@@ -7,7 +7,7 @@
      width: 300px;
      height: 180px;
      flex-shrink: 0;
-     margin: 8px;
+     margin: 5px;
      border-radius: 10px;
      background: linear-gradient(0deg, #DA22FF 0%, #9733EE 100%);
      padding: 10px;
@@ -19,7 +19,7 @@
      /* width: 340px; */
      height: 180px;
      flex-shrink: 0;
-     margin: 8px;
+     margin: 5px;
      border-radius: 10px;
      background: linear-gradient(0deg, #EC6F66 0%, #F3A183 100%);
      padding: 10px;
@@ -31,7 +31,7 @@
      width: 300px;
      height: 180px;
      flex-shrink: 0;
-     margin: 8px;
+     margin: 5px;
      border-radius: 10px;
      background: linear-gradient(284deg, #00FFF0 -19.4%, #0083FE 54.6%);
      padding: 10px;
@@ -43,7 +43,7 @@
      /* width: 340px; */
      height: 180px;
      flex-shrink: 0;
-     margin: 8px;
+     margin: 5px;
      border-radius: 10px;
      background: linear-gradient(180deg, #81CEDF 0%, #9464FD 100%);
      padding: 10px;
